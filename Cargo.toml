@@ -13,7 +13,7 @@ keywords = ["python", "numpy", "nalgebra", "matrix", "conversion"]
 categories = ["science"]
 
 [dependencies]
-nalgebra = "0.24.1"
+nalgebra = "0.25"
 numpy = "0.11"
 pyo3 = "0.11"
 
