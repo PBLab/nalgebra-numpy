@@ -202,7 +202,7 @@ where
 	}
 
 	// Check the data type of the input array.
-	if !N::is_same_type(&(*array).descr) {
+	if !N::is_same_type((*(*array).descr)) {
 		return Err(make_error());
 	}
 
