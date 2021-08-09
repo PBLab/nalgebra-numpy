@@ -78,7 +78,7 @@ where
 /// # Safety
 /// This function creates a mutable slice that references data owned by Python.
 /// The user must ensure that no other Rust references to the same data exist.
-#[allow(clippy::needless_lifetimes)]);
+#[allow(clippy::needless_lifetimes)]
 
 pub unsafe fn matrix_slice_mut_from_numpy<'a, N, R, C>(
 	_py: pyo3::Python,
