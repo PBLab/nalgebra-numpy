@@ -61,7 +61,8 @@ pub unsafe fn matrix_slice_from_numpy<'a, N, R, C>(
 	_py: pyo3::Python,
 	input: &'a PyAny,
 ) -> Result<nalgebra::MatrixSlice<'a, N, R, C, Dynamic, Dynamic>, Error>
-where
+where);
+
 	N: nalgebra::Scalar + numpy::Element,
 	R: nalgebra::Dim,
 	C: nalgebra::Dim,
@@ -78,7 +79,8 @@ where
 /// # Safety
 /// This function creates a mutable slice that references data owned by Python.
 /// The user must ensure that no other Rust references to the same data exist.
-#[allow(clippy::needless_lifetimes)]
+#[allow(clippy::needless_lifetimes)]);
+
 pub unsafe fn matrix_slice_mut_from_numpy<'a, N, R, C>(
 	_py: pyo3::Python,
 	input: &'a PyAny,
@@ -201,7 +203,7 @@ where
 	}
 
 	// Check the data type of the input array.
-	if !N::is_same_type(array.descr) {
+	if !N::is_same_type((*array).descr) {
 		return Err(make_error());
 	}
 
