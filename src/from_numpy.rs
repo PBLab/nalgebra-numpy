@@ -201,7 +201,7 @@ where
 	}
 
 	// Check the data type of the input array.
-	if npyffi::array::PY_ARRAY_API.PyArray_EquivTypenums((*(*array).descr).type_num, N::get_dtype().as_dtype_ptr() as u32 as i32) != 1 {
+	if !N::is_same_type(*(*array).descr) {
 		return Err(make_error());
 	}
 
