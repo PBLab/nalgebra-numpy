@@ -61,8 +61,7 @@ pub unsafe fn matrix_slice_from_numpy<'a, N, R, C>(
 	_py: pyo3::Python,
 	input: &'a PyAny,
 ) -> Result<nalgebra::MatrixSlice<'a, N, R, C, Dynamic, Dynamic>, Error>
-where);
-
+where
 	N: nalgebra::Scalar + numpy::Element,
 	R: nalgebra::Dim,
 	C: nalgebra::Dim,
