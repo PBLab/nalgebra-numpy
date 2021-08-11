@@ -13,7 +13,7 @@ keywords = ["python", "numpy", "nalgebra", "matrix", "conversion"]
 categories = ["science"]
 
 [dependencies]
-nalgebra = "0.26"
+nalgebra = { version = "0.26", features = ["serde-serialize"] }
 numpy = "0.14"
 pyo3 = "0.14"
 
